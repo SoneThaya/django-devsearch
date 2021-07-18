@@ -5,3 +5,6 @@ to activate environment
 to run server
 
 - python manage.py runserver
+
+admin
+password2020
