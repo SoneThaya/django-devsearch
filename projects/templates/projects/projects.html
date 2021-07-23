@@ -1,5 +1,4 @@
-{% extends 'main.html' %} 
-{% block content %}
+{% extends 'main.html' %} {% block content %}
 
 <h1>Projects</h1>
 
@@ -9,6 +8,7 @@
     <th>Positive Votes</th>
     <th>Votes</th>
     <th></th>
+    <th></th>
   </tr>
   {% for project in projects %}
   <tr>
@@ -16,7 +16,8 @@
     <td>{{project.vote_ratio}}%</td>
     <td>{{project.vote_total}}</td>
     <td>{{project.created}}</td>
-    <td><a href="{% url 'project' project.id %}">{{project.title}}</a></td>
+    <td><a href="{% url 'update-project' project.id %}">Edit</a></td>
+    <td><a href="{% url 'project' project.id %}">View</a></td>
   </tr>
   {% endfor %}
 </table>
